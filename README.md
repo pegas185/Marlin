@@ -1,4 +1,4 @@
-# Marlin 3D Printer Firmware
+# Marlin Modelmaniak Firmware fork for CNC mill built from tevo tarantula parts
 <img align="right" src="../../raw/1.1.x/buildroot/share/pixmaps/logo/marlin-250.png" />
 
 ## Marlin 1.1
