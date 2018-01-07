@@ -211,7 +211,7 @@
   #define RAMPS_D10_PIN 10
 #endif
 
-#define HEATER_0_PIN     RAMPS_D10_PIN
+#define HEATER_0_PIN     4//RAMPS_D10_PIN
 
 #if ENABLED(IS_RAMPS_EFB)                      // Hotend, Fan, Bed
   #define FAN_PIN        RAMPS_D9_PIN
@@ -226,7 +226,7 @@
   #define FAN_PIN        RAMPS_D9_PIN
   #define FAN1_PIN       RAMPS_D8_PIN
 #elif ENABLED(IS_RAMPS_SF)                     // Spindle, Fan
-  #define FAN_PIN        RAMPS_D8_PIN
+  //#define FAN_PIN        RAMPS_D8_PIN
 #else                                          // Non-specific are "EFB" (i.e., "EFBF" or "EFBE")
   #define FAN_PIN        RAMPS_D9_PIN
   #define HEATER_BED_PIN RAMPS_D8_PIN
@@ -272,7 +272,7 @@
 //
 #if ENABLED(SPINDLE_LASER_ENABLE) && !PIN_EXISTS(SPINDLE_LASER_ENABLE)
   #if !defined(NUM_SERVOS) || NUM_SERVOS == 0 // try to use servo connector first
-    #define SPINDLE_LASER_ENABLE_PIN  4  // Pin should have a pullup/pulldown!
+    #define SPINDLE_LASER_ENABLE_PIN  RAMPS_D10_PIN  // Pin should have a pullup/pulldown!
     #define SPINDLE_LASER_PWM_PIN     6  // MUST BE HARDWARE PWM
     #define SPINDLE_DIR_PIN           5
   #elif !(ENABLED(ULTRA_LCD) && ENABLED(NEWPANEL) \

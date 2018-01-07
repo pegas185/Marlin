@@ -104,6 +104,7 @@
 #elif MB(MKS_BASE)
   #include "pins_MKS_BASE.h"          // ATmega1280, ATmega2560
 #elif MB(MKS_13)
+  #define IS_RAMPS_SF
   #include "pins_MKS_13.h"            // ATmega1280, ATmega2560
 #elif MB(MKS_GEN_L)
   #include "pins_MKS_GEN_L.h"         // ATmega1280, ATmega2560
