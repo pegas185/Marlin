@@ -315,7 +315,7 @@ function onSection() {
       isFirstSection() ||
       (rpmFormat.areDifferent(tool.spindleRPM, sOutput.getCurrent())) ||
       (tool.clockwise != getPreviousSection().getTool().clockwise)) {
-    if (tool.spindleRPM < 1) {
+    if (!tool.isJetTool() && tool.spindleRPM < 1) {
       error(localize("Spindle speed out of range."));
     }
     if (tool.spindleRPM > 99999) {
